@@ -10,7 +10,7 @@
     name: Hub
     entities:
       - sun.sun
-      - device_tracker.vdjvxkwt_garethsiphone
+      - device_tracker.XXXXXXXXXXXXX
       - sensor.yr_symbol
 
   lounge:
