@@ -1,0 +1,32 @@
+  - platform: command_line
+    switches:
+      lounge_tv:
+        friendly_name: TV
+        command_on: "/bin/bash /home/hass/scripts/loungetv.sh on"
+        command_off: "/bin/bash /home/hass/scripts/loungetv.sh off"
+      lounge_stereo:
+        friendly_name: Stereo
+        command_on: "/bin/bash /home/hass/scripts/stereo.sh on"
+        command_off: "/bin/bash /home/hass/scripts/stereo.sh off"
+      lounge_tvrecorder:
+        friendly_name: PVR
+        command_on: "/bin/bash /home/hass/scripts/tvrecorder.sh on"
+        command_off: "/bin/bash /home/hass/scripts/tvrecorder.sh off"
+      lounge_amp:
+        friendly_name: Receiver
+        command_on: "/bin/bash /home/hass/scripts/amp.sh on"
+        command_off: "/bin/bash /home/hass/scripts/amp.sh off"
+      lounge_dvd:
+        friendly_name: DVD
+        command_on: "/bin/bash /home/hass/scripts/dvd.sh on"
+        command_off: "/bin/bash /home/hass/scripts/dvd.sh off"
+
+      playroom_xbox:
+        friendly_name: XBOX
+        command_on: "/bin/bash /home/hass/scripts/xbox.sh on"
+        command_off: "/bin/bash /home/hass/scripts/xbox.sh off"
+
+      study_computer:
+        friendly_name: PC
+        command_on: "/bin/bash /home/hass/scripts/computer.sh on"
+        command_off: "/bin/bash /home/hass/scripts/computer.sh off"

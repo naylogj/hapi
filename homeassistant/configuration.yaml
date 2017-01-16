@@ -1,0 +1,95 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 52.34923
+  longitude: -1.279892
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 114
+  # metric for Metric, imperial for Imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/London
+  customize: !include customize.yaml
+
+group: !include group.yaml
+
+switch: !include switches.yaml
+
+# configuration for emulated Hue (for Alexa discovery)
+emulated_hue: !include emulated_hue.yaml
+
+#introduction:
+
+# Zones (waypoints from OwnTracks)
+zone:
+  name: Westwood
+  latitude: 52.3831
+  longitude: -1.58486
+  radius: 100
+  icon: mdi:school
+
+zone 2:
+  name: KES
+  latitude: 52.4499283 
+  longitude: -1.9233248
+  radius: 150
+
+zone 3:
+  name: McD
+  latitude: 52.48668842
+  longitude: -1.902774833
+  radius:  100
+
+zone 4:
+  name: Home
+  latitude: 52.3492338415
+  longitude: -1.278507281
+  radius: 30
+
+# Enables the frontend
+frontend:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password:  !secret http_password 
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Track the sun
+sun:
+
+# Weather Prediction
+sensor:
+  - platform: yr
+
+# Discover some devices automatically
+discovery:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+device_tracker:
+  - platform: owntracks
+    waypoints: True
+    waypoint_whitelist:
+      - vdjvxkwt
+      - gareth
+      - Gareth
+
+mqtt:
+  broker: m21.cloudmqtt.com
+  port: 24497
+  username: vdjvxkwt
+  password: !secret mqtt_password
+
+notify:
+  platform: pushbullet
+  api_key:  !secret notify_api_key
+  name: mypushbullet
+

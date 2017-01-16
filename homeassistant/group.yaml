@@ -1,0 +1,33 @@
+  default_view:
+    view: yes
+    entities:
+      - group.hub
+      - group.lounge
+      - group.playroom
+      - group.study
+
+  hub:
+    name: Hub
+    entities:
+      - sun.sun
+      - device_tracker.vdjvxkwt_garethsiphone
+      - sensor.yr_symbol
+
+  lounge:
+    name: Lounge
+    entities:
+      - switch.lounge_tv
+      - switch.lounge_stereo
+      - switch.lounge_tvrecorder
+      - switch.lounge_amp
+      - switch.lounge_dvd
+
+  playroom:
+    name: Playroom
+    entities:
+      - switch.playroom_xbox
+
+  study:
+    name: Study
+    entities:
+      - switch.study_computer

@@ -1,0 +1,20 @@
+    switch.lounge_tv:
+      icon: mdi:television
+
+    switch.lounge_stereo:
+      icon: mdi:amplifier
+
+    switch.lounge_tvrecorder:
+      icon: mdi:record-rec
+
+    switch.lounge_amp:
+      icon: mdi:amplifier
+
+    switch.lounge_dvd:
+      icon: mdi:filmstrip
+
+    switch.playroom_xbox:
+      icon: mdi:console
+
+    switch.study_computer:
+      icon: mdi:laptop
