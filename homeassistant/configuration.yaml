@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 
-  longitude: 
+  latitude: !secret lat0
+  longitude: !secret long0
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 114
   # metric for Metric, imperial for Imperial
@@ -23,27 +23,27 @@ emulated_hue: !include emulated_hue.yaml
 # Zones (waypoints from OwnTracks)
 zone:
   name: Westwood
-  latitude: 
-  longitude: 
+  latitude: !secret lat1
+  longitude: !secret long1
   radius: 100
   icon: mdi:school
 
 zone 2:
   name: KES
-  latitude: 
-  longitude: 
+  latitude: !secret lat2
+  longitude: !secret long2
   radius: 150
 
 zone 3:
   name: McD
-  latitude: 
-  longitude: 
+  latitude: !secret lat3
+  longitude: !secret long3
   radius:  100
 
 zone 4:
   name: Home
-  latitude: 
-  longitude: 
+  latitude: !secret lat4
+  longitude: !secret long4
   radius: 30
 
 # Enables the frontend
@@ -78,13 +78,14 @@ device_tracker:
   - platform: owntracks
     waypoints: True
     waypoint_whitelist:
+      - vdjvxkwt
       - gareth
       - Gareth
 
 mqtt:
   broker: m21.cloudmqtt.com
   port: 24497
-  username: 
+  username: !secret mqtt_username
   password: !secret mqtt_password
 
 notify:

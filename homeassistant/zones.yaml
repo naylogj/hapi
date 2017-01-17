@@ -1,0 +1,25 @@
+# Zones (waypoints from OwnTracks)
+zone:
+  name: Westwood
+  latitude: !secret lat1
+  longitude: !secret long1
+  radius: 100
+  icon: mdi:school
+
+zone 2:
+  name: KES
+  latitude: !secret lat2
+  longitude: !secret long2
+  radius: 150
+
+zone 3:
+  name: McD
+  latitude: !secret lat3
+  longitude: !secret long3
+  radius:  100
+
+zone 4:
+  name: Home
+  latitude: !secret lat4
+  longitude: !secret long4
+  radius: 30
